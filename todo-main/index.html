@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tasklist</title>
+    <link href="css/style.css" rel=stylesheet>
+</head>
+<body>
+    <div class="todo-list-wrapper">
+        <div class="todo-list">
+            <h2 class="todo-main-title">
+                Today's Tasks
+            </h2>
+            <h3 class="todo-title">
+                <div class="title-text">
+                    To do:
+                </div>
+                <div class="todo-progress"></div>
+            </h3>
+            <div class="todo-list-panel">
+                <ul class="todo"></ul>
+                <p class="empty-list hidden">
+                    No items. Why not add one below.
+                </p>
+            </div>
+            <div class="create-new-item">
+                <input type="text" class="create-new-item-input" placeholder="Type and hit Enter to add" required>  
+            </div>
+            <h3 class="done-title">
+                <div class="title-text">
+                    Done:
+                </div>
+                <div class="done-progress"></div>
+            </h3>
+            <div class="done-items-panel">
+                <ul class="done-list"></ul>
+                <p class="empty hidden">
+                    No done items.
+                </p>
+            </div>
+            <div class="delete-done-items-panel">
+                <a href="#" class="delete-items" title="Remove all done items">
+                    <img src="img/delete.gif" alt="Delete all done items">
+                </a>
+            </div>
+        </div>
+    </div>
+    <template id="task-template">
+        <li class="todo-list-item">
+            <input type="checkbox" class="checkbox">
+            <span></span>
+            <img src="img/delete.gif" title="Delete item" alt="Delete" class="delete-item">
+        </li>
+    </template>
+    <template id="change-task-template">
+        <li class="inplaceeditor">
+            <form class="form">
+                <input type="text" size="30" class="input-new-task">
+                <input type="submit" value="Save" class="save">
+                <input type="button" value="Cancel" class="cansel">
+            </form>
+        </li>
+    </template>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
